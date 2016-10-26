@@ -1,0 +1,25 @@
+{
+    "animales":[
+        {
+            "id":1,
+            "nombre":"jjjjjj",
+            "tipo" : "tigre"
+        },
+        {
+            "id":2,
+            "nombre":"fhfhdf",
+            "tipo" : "leon"
+        },
+        {
+            "id":3,
+            "nombre":"jhgjjjjjgf",
+            "tipo" : "perro"
+        },
+        {
+            "id":4,
+            "nombre":"hjfjfjf",
+            "tipo" : "gato"
+        }
+
+    ]
+}
