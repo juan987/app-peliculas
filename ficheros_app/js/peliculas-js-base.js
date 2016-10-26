@@ -21,8 +21,7 @@ function peticionAjaxGenerica(){
         dataType: "json",
         //URL de comunicacion con el servicio
         //url: "https://jsonplaceholder.typicode.com/albums"
-        //url: "https://jsonplaceholder.typicode.com/users"
-        url: "http://localhost:3000/peliculas"    
+        url: "https://jsonplaceholder.typicode.com/users"
     }).done(peticionCompletada).fail(peticionFallida);
 }//Fin de peticionAjaxGenerica
 
@@ -32,21 +31,16 @@ function peticionCompletada(data, status, jqXHR){
     //$("#contenido_de_ajax").html(data[0].username);
     $("#contenido_de_ajax").html("<p>hola soy juan</p>");
     for(i in data){
-        $("#contenido_de_ajax").append(data[i].titulo +"<br/>");
+        $("#contenido_de_ajax").append(data[i].username +"<br/>");
         $("tbody").append("<tr>" 
             +"<td>" +data[i].id +"</td>" 
-            +"<td>" +data[i].titulo +"</td>" 
-            +"<td>" +data[i].director +"</td>" 
-            +"<td>" +data[i].sinopsis +"</td>" 
-            +"<td>" +data[i].fecha +"</td>" 
-            +"<td>" +data[i].valoracion +"</td>" 
+            +"<td>" +data[i].name +"</td>" 
+            +"<td>" +data[i].username +"</td>" 
+            +"<td>" +data[i].email +"</td>" 
             //+"<td>" +data[i].address +"</td>"
 
             //address es un objeto json, hago stringify para poder inprimirlo en la columna address 
-            //+"<td>" +JSON.stringify(data[i].address) +"</td>" 
-            
-            
-            //Utilidades de JSON para estudiar
+            +"<td>" +JSON.stringify(data[i].address) +"</td>" 
             //JSON.stringify(object)
             //Para pasar un string a un objeto json
             //  JSON.parse(string)

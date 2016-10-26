@@ -1,0 +1,6 @@
+	#rosa input:valid {
+		background: pink;
+	}
+	#rosa input:invalid {
+		background: red;
+	}

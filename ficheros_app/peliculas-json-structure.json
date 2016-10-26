@@ -1,24 +1,36 @@
 {
-    "animales":[
+    "peliculas":[
         {
             "id":1,
-            "nombre":"jjjjjj",
-            "tipo" : "tigre"
+            "titulo":"peli 1",
+            "director" : "fffff",
+            "sinopsis" : "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+            "fecha" : "15/01/2016",
+            "valoracion" : "Mala"
         },
         {
             "id":2,
-            "nombre":"fhfhdf",
-            "tipo" : "leon"
+            "titulo":"peli 2",
+            "director" : "bgbgbg",
+            "sinopsis" : "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+            "fecha" : "15/01/2016",
+            "valoracion" : "Mala"
         },
         {
             "id":3,
-            "nombre":"jhgjjjjjgf",
-            "tipo" : "perro"
+            "titulo":"peli 3",
+            "director" : "nju hhh",
+            "sinopsis" : "sssssssssssssssssssssssssssssssssssssssssssssssss",
+            "fecha" : "15/01/2016",
+            "valoracion" : "Mala"
         },
         {
             "id":4,
-            "nombre":"hjfjfjf",
-            "tipo" : "gato"
+            "titulo":"peli 4",
+            "director" : "ertc fffff ggggg",
+            "sinopsis" : "ssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+            "fecha" : "15/01/2016",
+            "valoracion" : "Mala"
         }
 
     ]
