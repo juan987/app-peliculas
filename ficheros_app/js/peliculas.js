@@ -6,6 +6,7 @@ function initializeEvents(){
     $("#guardar").click(ajaxPost);
     $("#modificar").click(ajaxPut);
     $("#borrar").click(ajaxDelete);
+    $("#serializarFormulario").click(generaJsonFromFormulario);
 
     
 
@@ -45,8 +46,9 @@ function peticionCompletada(data, status, jqXHR){
             +"<td>" +data[i].sinopsis +"</td>" 
             +"<td>" +data[i].fecha +"</td>" 
             +"<td>" +data[i].valoracion +"</td>" 
-            //+"<td>" +data[i].address +"</td>"
 
+            //Esto era el codigo para //url: "https://jsonplaceholder.typicode.com/users"
+            //+"<td>" +data[i].address +"</td>"
             //address es un objeto json, hago stringify para poder inprimirlo en la columna address 
             //+"<td>" +JSON.stringify(data[i].address) +"</td>" 
             
@@ -89,8 +91,8 @@ function resultadoPost(){
 
 // POST adds a random id to the object sent
 //Hecho como en los ejemplos de https://github.com/typicode/jsonplaceholder#how-to
-function ajaxPost(){
-
+function ajaxPostPrueba(){
+//SOLO USADO PARA PRUEBAS
     $.ajax("http://localhost:3000/peliculas", {
         method: 'POST',
         data: {
@@ -103,7 +105,8 @@ function ajaxPost(){
             valoracion: 'Excelente'
         }
         }).then(function(data) {
-        console.log("Resultado del POST" +data);
+        console.log("Resultado del POST de prueba" +data);
+
     });
 
     /* will return
@@ -114,6 +117,21 @@ function ajaxPost(){
     userId: 1
     }
     */
+}//Fin de ajaxPostPrueba
+
+function ajaxPost(){
+    let datos = generaJsonFromFormulario();
+    //JsonParse me da error, estudiarlo mejor
+    //var objetoJson = JSON.parse(datos);
+    $.ajax("http://localhost:3000/peliculas", {
+        method: 'POST',
+        data: datos
+        //data: objetoJson
+        }).then(function(data) {
+        console.log("Resultado del POST" +data);
+        //Recargo los datos desde el servidor
+        peticionAjaxGenerica();
+    });
 }//Fin de ajaxPost
 
 //Actualizar-modificar datos de una pelicula concreta

@@ -6,23 +6,31 @@
     <link rel="stylesheet" href="css/peliculas.css"></link>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="js/peliculas.js"></script>
+    <script type="text/javascript" src="js/peliculasJSON.js"></script>
 </head>
 <body>
     <!-- Cosas que no uso o he cambiado 
     	<p>Nombre: <input type="text" name="nombre" required pattern="([a-zA-ZñÑ]{3,}uben|Victor)" /></p>
         <p><input type="submit" value="enviar"></p>
-
     -->
+    <!-- En casa el 27oct16 -->
+    <input type="button" id="serializarFormulario" value="Serializar formulario"/>
+    <div id="resultadoSerializacion"></div>
+    <!-- FIN de En casa el 27oct16 -->
+
+
+
+
     <h1>Formulario de peliculas</h1>
 	<form id="miFormulario" action="#">
 	<div id="rosa">
-		<p>Id de la película: <input type="text" name="nombre" required  /></p>
-		<p>Título: <input type="text" name="nombre" required  /></p>
-		<p>Director: <input type="text" name="nombre" required  /></p>
-		<p>Sinopsis: <input type="text" name="nombre" required  /></p>
-        <p>Fecha: <input type="date" name="date_control" required/>
+		<p>Id de la película: <input type="text" name="id" disabled  /></p>
+		<p>Título: <input type="text" name="titulo" required  /></p>
+		<p>Director: <input type="text" name="director" required  /></p>
+		<p>Sinopsis: <input type="text" name="sinopsis" required  /></p>
+        <p>Fecha: <input type="date" name="fecha" required/>
 
-		<p>Valoración: <input type="text" list="cafes" name="lista" required></p>
+		<p>Valoración: <input type="text" list="cafes" name="valoracion" required></p>
 		<datalist id="cafes">
 			<option label="Mala" 
 					value="Mala">

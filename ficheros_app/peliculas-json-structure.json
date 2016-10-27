@@ -87,6 +87,34 @@
       "fecha": "12/06/1998",
       "valoracion": "Excelente",
       "id": 12
+    },
+    {
+      "{titulo:'guardar',director:'wwww',sinopsis:'dede  ffff',fecha:'2016-10-27',valoracion:'Excelente',}": "",
+      "id": 13
+    },
+    {
+      "undefinedtitulo:'prueba guardar',director:'ssss',sinopsis:'eeeee',fecha:'2016-10-27',valoracion:'Excelente'": "",
+      "id": 14
+    },
+    {
+      "datos": "undefinedtitulo:'guardar prueba',director:'jdjkd djdjk',sinopsis:'kdkdkddkdkdkd',fecha:'2016-10-27',valoracion:'Excelente'",
+      "id": 15
+    },
+    {
+      "titulo": "www",
+      "director": "www",
+      "sinopsis": "www",
+      "fecha": "2016-10-27",
+      "valoracion": "Excelente",
+      "id": 16
+    },
+    {
+      "titulo": 17,
+      "director": "yyyy",
+      "sinopsis": "yyyy",
+      "fecha": "2016-10-30",
+      "valoracion": "Mala",
+      "id": 17
     }
   ]
 }
