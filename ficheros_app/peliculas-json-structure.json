@@ -1,14 +1,6 @@
 {
   "peliculas": [
     {
-      "id": 1,
-      "titulo": "peli 1",
-      "director": "fffff",
-      "sinopsis": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-      "fecha": "15/01/2016",
-      "valoracion": "Mala"
-    },
-    {
       "id": 2,
       "titulo": "peli 2",
       "director": "bgbgbg",
@@ -47,6 +39,38 @@
       "fecha": "12/06/1998",
       "valoracion": "Excelente",
       "id": 6
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 7
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 8
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 9
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 10
     }
   ]
 }

@@ -5,6 +5,7 @@ function initializeEvents(){
     peticionAjaxGenerica();
     $("#guardar").click(ajaxPost);
     $("#modificar").click(ajaxPut);
+    $("#borrar").click(ajaxDelete);
 
     
 
@@ -28,7 +29,7 @@ function peticionAjaxGenerica(){
         //url: "https://jsonplaceholder.typicode.com/users"
         url: "http://localhost:3000/peliculas"    
     }).done(peticionCompletada).fail(peticionFallida);
-}//Fin de peticionAjaxGenerica
+}//Fin de peticionAjaxGenerica (GET)
 
 
 //data es lo nos devuelve el servidor
@@ -91,18 +92,18 @@ function resultadoPost(){
 function ajaxPost(){
 
     $.ajax("http://localhost:3000/peliculas", {
-    method: 'POST',
-    data: {
-        //Con el POST, nunca le paso el id, eso lo hace la base de datos.
-        //id: 'foo',
-        titulo: 'bar',
-        director: '1',
-        sinopsis: '1',
-        fecha: '12/06/1998',
-        valoracion: 'Excelente'
-    }
-    }).then(function(data) {
-    console.log("Resultado del POST" +data);
+        method: 'POST',
+        data: {
+            //Con el POST, nunca le paso el id, eso lo hace la base de datos.
+            //id: 'foo',
+            titulo: 'bar',
+            director: '1',
+            sinopsis: '1',
+            fecha: '12/06/1998',
+            valoracion: 'Excelente'
+        }
+        }).then(function(data) {
+        console.log("Resultado del POST" +data);
     });
 
     /* will return
@@ -113,30 +114,58 @@ function ajaxPost(){
     userId: 1
     }
     */
-}
+}//Fin de ajaxPost
 
-//Actualizar datos de una pelicula concreta
+//Actualizar-modificar datos de una pelicula concreta
 function ajaxPut(){
     $.ajax('http://localhost:3000/peliculas/1', {
-  method: 'PUT',
-  data: {
-    id: 1,
-    titulo: 'modificado',
-    director: '199999',
-    sinopsis: '373474747',
-    fecha: '27/10/2016',
-    valoracion: 'Mala'
-  }
-}).then(function(data) {
-  console.log("Resultado del PUT" +data);
-});
+        method: 'PUT',
+        data: {
+            id: 1,
+            titulo: 'modificado',
+            director: '199999',
+            sinopsis: '373474747',
+            fecha: '27/10/2016',
+            valoracion: 'modificado'
+        }
+        }).then(function(data) {
+        console.log("Resultado del PUT" +data);
+    });
 
-/* will return
-{
-  id: 1
-  title: 'foo',
-  body: 'bar',
-  userId: 1
+    /* will return
+    {
+    id: 1
+    title: 'foo',
+    body: 'bar',
+    userId: 1
+    }
+    */
+}//Fin de ajaxPut
+
+//Borrar pelicula
+//Borra la peli con id= 1
+function ajaxDelete(){
+    $.ajax('http://localhost:3000/peliculas/1', {
+    method: 'DELETE'
+    });
+
+
+    //Aprovecho para ver si busqueda funciona
+    busquedaConFiltro();
+}//Fin ajaxDelete
+
+
+//Buscar datos especificos
+//Filtering resources
+//Basic filtering is supported through query parameters.
+// Will return all the posts that belong to the first user
+function busquedaConFiltro(){
+    //$.ajax('http://localhost:3000/peliculas/?id=1').then(function(data) {
+    $.ajax('http://jsonplaceholder.typicode.com/posts?userId=1').then(function(data) {
+        console.log("busqueda con filtro: " +data);
+    });
 }
-*/
-}
+
+
+
+
