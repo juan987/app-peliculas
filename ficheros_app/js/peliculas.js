@@ -118,7 +118,7 @@ function ajaxPost(){
 
 //Actualizar-modificar datos de una pelicula concreta
 function ajaxPut(){
-    $.ajax('http://localhost:3000/peliculas/1', {
+    $.ajax('http://localhost:3000/peliculas/2', {
         method: 'PUT',
         data: {
             id: 1,
@@ -145,7 +145,7 @@ function ajaxPut(){
 //Borrar pelicula
 //Borra la peli con id= 1
 function ajaxDelete(){
-    $.ajax('http://localhost:3000/peliculas/1', {
+    $.ajax('http://localhost:3000/peliculas/2', {
     method: 'DELETE'
     });
 

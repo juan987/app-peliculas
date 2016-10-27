@@ -71,6 +71,22 @@
       "fecha": "12/06/1998",
       "valoracion": "Excelente",
       "id": 10
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 11
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 12
     }
   ]
 }
