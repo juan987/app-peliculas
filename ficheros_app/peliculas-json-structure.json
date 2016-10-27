@@ -1,37 +1,52 @@
 {
-    "peliculas":[
-        {
-            "id":1,
-            "titulo":"peli 1",
-            "director" : "fffff",
-            "sinopsis" : "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-            "fecha" : "15/01/2016",
-            "valoracion" : "Mala"
-        },
-        {
-            "id":2,
-            "titulo":"peli 2",
-            "director" : "bgbgbg",
-            "sinopsis" : "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-            "fecha" : "15/01/2016",
-            "valoracion" : "Mala"
-        },
-        {
-            "id":3,
-            "titulo":"peli 3",
-            "director" : "nju hhh",
-            "sinopsis" : "sssssssssssssssssssssssssssssssssssssssssssssssss",
-            "fecha" : "15/01/2016",
-            "valoracion" : "Mala"
-        },
-        {
-            "id":4,
-            "titulo":"peli 4",
-            "director" : "ertc fffff ggggg",
-            "sinopsis" : "ssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
-            "fecha" : "15/01/2016",
-            "valoracion" : "Mala"
-        }
-
-    ]
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "peli 1",
+      "director": "fffff",
+      "sinopsis": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "fecha": "15/01/2016",
+      "valoracion": "Mala"
+    },
+    {
+      "id": 2,
+      "titulo": "peli 2",
+      "director": "bgbgbg",
+      "sinopsis": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "fecha": "15/01/2016",
+      "valoracion": "Mala"
+    },
+    {
+      "id": 3,
+      "titulo": "peli 3",
+      "director": "nju hhh",
+      "sinopsis": "sssssssssssssssssssssssssssssssssssssssssssssssss",
+      "fecha": "15/01/2016",
+      "valoracion": "Mala"
+    },
+    {
+      "id": 4,
+      "titulo": "peli 4",
+      "director": "ertc fffff ggggg",
+      "sinopsis": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "fecha": "15/01/2016",
+      "valoracion": "Mala"
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 5
+    },
+    {
+      "titulo": "bar",
+      "director": 1,
+      "sinopsis": 1,
+      "fecha": "12/06/1998",
+      "valoracion": "Excelente",
+      "id": 6
+    }
+  ]
 }

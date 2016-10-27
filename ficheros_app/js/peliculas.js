@@ -3,6 +3,10 @@ $(document).ready(initializeEvents);
 function initializeEvents(){
     //$("#peticion_ajax").click(peticionAjaxGenerica);
     peticionAjaxGenerica();
+    $("#guardar").click(ajaxPost);
+    $("#modificar").click(ajaxPut);
+
+    
 
 }
 
@@ -77,4 +81,62 @@ function resultadoGet(data, status){
 
 function resultadoPost(){
     alert("Post correcto!!")
+}
+//FIN de Esta es una forma acelerada y reducida  del $.ajax para get y post
+
+//Creating a resource
+
+// POST adds a random id to the object sent
+//Hecho como en los ejemplos de https://github.com/typicode/jsonplaceholder#how-to
+function ajaxPost(){
+
+    $.ajax("http://localhost:3000/peliculas", {
+    method: 'POST',
+    data: {
+        //Con el POST, nunca le paso el id, eso lo hace la base de datos.
+        //id: 'foo',
+        titulo: 'bar',
+        director: '1',
+        sinopsis: '1',
+        fecha: '12/06/1998',
+        valoracion: 'Excelente'
+    }
+    }).then(function(data) {
+    console.log("Resultado del POST" +data);
+    });
+
+    /* will return
+    {
+    id: 101,
+    title: 'foo',
+    body: 'bar',
+    userId: 1
+    }
+    */
+}
+
+//Actualizar datos de una pelicula concreta
+function ajaxPut(){
+    $.ajax('http://localhost:3000/peliculas/1', {
+  method: 'PUT',
+  data: {
+    id: 1,
+    titulo: 'modificado',
+    director: '199999',
+    sinopsis: '373474747',
+    fecha: '27/10/2016',
+    valoracion: 'Mala'
+  }
+}).then(function(data) {
+  console.log("Resultado del PUT" +data);
+});
+
+/* will return
+{
+  id: 1
+  title: 'foo',
+  body: 'bar',
+  userId: 1
+}
+*/
 }
