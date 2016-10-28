@@ -8,6 +8,12 @@ function initializeEvents(){
     $("#borrar").click(ajaxDelete);
     $("#serializarFormulario").click(generaJsonFromFormulario);
 
+    //a ver que muestra esto
+    $('table tbody tr').click(function(){
+        alert($(this).text());
+        console.log($(this).text());
+    });
+
     
 
 }
@@ -59,8 +65,16 @@ function peticionCompletada(data, status, jqXHR){
             //  JSON.parse(string)
         +"</tr>)");//Fin del append
     }
-    alert("Peticion completada con status: " +status +" : " +data);
-}
+    //alert("Peticion completada con status: " +status +" : " +data);
+    console.log("Peticion completada con status: " +status +" : " +data);
+
+    //Ver texto de todas las celdas de una fila sin formato
+    verTextoDeUnaFila();
+    //Resaltar fila cuando hago hover
+    resaltarFilaEnTablaCuandoHover();
+}//Fin de peticion completada
+
+
 
 function peticionFallida(jqXHR,status,error){
     console.log("Error al procesar la peticion Ajax");
