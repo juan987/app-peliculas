@@ -1,14 +1,6 @@
 {
   "peliculas": [
     {
-      "id": 2,
-      "titulo": "peli 2",
-      "director": "bgbgbg",
-      "sinopsis": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
-      "fecha": "15/01/2016",
-      "valoracion": "Mala"
-    },
-    {
       "id": 3,
       "titulo": "peli 3",
       "director": "nju hhh",
@@ -115,6 +107,14 @@
       "fecha": "2016-10-30",
       "valoracion": "Mala",
       "id": 17
+    },
+    {
+      "titulo": "",
+      "director": "",
+      "sinopsis": "",
+      "fecha": "",
+      "valoracion": "",
+      "id": 18
     }
   ]
 }

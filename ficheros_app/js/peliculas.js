@@ -8,15 +8,11 @@ function initializeEvents(){
     $("#borrar").click(ajaxDelete);
     $("#serializarFormulario").click(generaJsonFromFormulario);
 
-    //a ver que muestra esto
-    $('table tbody tr').click(function(){
-        alert($(this).text());
-        console.log($(this).text());
-    });
-
     
 
+
 }
+
 
 
 //Combina los efectos del 13 y el 14
@@ -52,6 +48,7 @@ function peticionCompletada(data, status, jqXHR){
             +"<td>" +data[i].sinopsis +"</td>" 
             +"<td>" +data[i].fecha +"</td>" 
             +"<td>" +data[i].valoracion +"</td>" 
+            +"<td class='borrar'>" +"<button>Borrar</button>" +"</td>" 
 
             //Esto era el codigo para //url: "https://jsonplaceholder.typicode.com/users"
             //+"<td>" +data[i].address +"</td>"
@@ -69,9 +66,11 @@ function peticionCompletada(data, status, jqXHR){
     console.log("Peticion completada con status: " +status +" : " +data);
 
     //Ver texto de todas las celdas de una fila sin formato
-    verTextoDeUnaFila();
+    //verTextoDeUnaFila();
     //Resaltar fila cuando hago hover
     resaltarFilaEnTablaCuandoHover();
+    //Activar click en celda borrar
+    activarBorrado();
 }//Fin de peticion completada
 
 
@@ -133,6 +132,7 @@ function ajaxPostPrueba(){
     */
 }//Fin de ajaxPostPrueba
 
+//Agregar una nueva pelicula a la db
 function ajaxPost(){
     let datos = generaJsonFromFormulario();
     //JsonParse me da error, estudiarlo mejor
@@ -175,15 +175,42 @@ function ajaxPut(){
 }//Fin de ajaxPut
 
 //Borrar pelicula
-//Borra la peli con id= 1
-function ajaxDelete(){
+function ajaxDeleteTest(){
+    //Borra la peli con id= 2
     $.ajax('http://localhost:3000/peliculas/2', {
     method: 'DELETE'
     });
+}//Fin ajaxDeleteTest
 
+//Borrar pelicula al clickar en la columna borrar
+function ajaxDelete(){
+    console.log("En el metodo ajaxDelete");
+    //Obtener la fila que contiene la celda borrar clickada
+    let filaDatosDeLaPelicula = $(this).parent();
+    //Obtener el valor de la primera celda TD en esta fila que es el id en la DB
+    let idDeLaPelicula = filaDatosDeLaPelicula.find("td:eq(0)").text();
+    let nombreDeLaPelicula = filaDatosDeLaPelicula.find("td:eq(1)").text();
 
-    //Aprovecho para ver si busqueda funciona
-    busquedaConFiltro();
+    // get the current row
+         //var currentRow=$(this).closest("tr"); 
+         
+        // var col1=currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+    //console.log("En metodo AjaxDelete:  " +$(filaDatosDeLaPelicula).children()[1].text());
+    console.log("En metodo AjaxDelete:  " +idDeLaPelicula +" , Nombre de la peli: " +nombreDeLaPelicula);
+    //url de la llamada ajax
+    let miUrl = 'http://localhost:3000/peliculas/' +idDeLaPelicula;
+    console.log("url para borrar la peli en la db:  " +miUrl)
+    //Llamada ajax para borrar la pelicula en la DB
+    $.ajax(miUrl, {
+    method: 'DELETE'
+    });
+
+    //Ultimo paso:
+    //Eliminar la fila de la tabla html (Sin verificar el resultado Ajax)
+    $(this).closest('tr').remove();
+    
+    //Obtener el indice de esta pelicula de la DB, que esta en la columna 1
+
 }//Fin ajaxDelete
 
 

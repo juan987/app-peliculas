@@ -1,6 +1,6 @@
 function verTextoDeUnaFila(){
     $('table tbody tr').click(function(){
-        alert($(this).text());
+        //alert($(this).text());
         console.log($(this).text());
     });
 }
@@ -15,4 +15,9 @@ function inMouseEvent(){
 
 function outMouseEvent(){
     $(this).css("background-color", "#fff")
+}
+
+function activarBorrado(){
+    //Para borrar una fila
+    $("table tbody td.borrar").click(ajaxDelete);
 }
