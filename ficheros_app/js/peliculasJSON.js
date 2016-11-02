@@ -21,6 +21,9 @@ function generaJsonFromFormulario(){
     $("#resultadoSerializacion").append("<br/>" +xxx);
     //return stringJsonConPeliculaDatos.substring(0, stringJsonConPeliculaDatos.length - 1);
     //return xxx;
+    console.log("Form serializada como json:  " +x);
+
+
 
     var objetojson = {
             //Con el POST, nunca le paso el id, eso lo hace la base de datos.
@@ -32,4 +35,40 @@ function generaJsonFromFormulario(){
             valoracion: x[4].value
         }
     return objetojson;
-}
+}//Fin de generaJsonFromFormulario
+
+function generaJsonFromFormularioModificado(){
+
+    var x = $("#miFormulario").serializeArray();
+
+    console.log("Form serializada como json:  " +x);
+
+
+
+    var objetojson = {
+            //Con el POST, nunca le paso el id, eso lo hace la base de datos.
+            //id: 'foo',
+            titulo: x[1].value,
+            director: x[2].value,
+            sinopsis: x[3].value,
+            fecha: x[4].value,
+            valoracion: x[5].value
+        }
+    return objetojson;
+}//Fin de generaJsonFromFormularioModificado
+
+function devuelveElIdDeLaPelicula(){
+
+    var x = $("#miFormulario").serializeArray();
+
+    var objetojson = {
+            //Con el POST, nunca le paso el id, eso lo hace la base de datos.
+            //id: 'foo',
+            titulo: x[1].value,
+            director: x[2].value,
+            sinopsis: x[3].value,
+            fecha: x[4].value,
+            valoracion: x[5].value
+        }
+    return x[0].value;
+}//Fin de generaJsonFromFormularioModificado

@@ -49,6 +49,7 @@ function peticionCompletada(data, status, jqXHR){
             +"<td>" +data[i].fecha +"</td>" 
             +"<td>" +data[i].valoracion +"</td>" 
             +"<td class='borrar'>" +"<button>Borrar</button>" +"</td>" 
+            +"<td class='modificar'>" +"<button>Modificar</button>" +"</td>" 
 
             //Esto era el codigo para //url: "https://jsonplaceholder.typicode.com/users"
             //+"<td>" +data[i].address +"</td>"
@@ -71,6 +72,8 @@ function peticionCompletada(data, status, jqXHR){
     resaltarFilaEnTablaCuandoHover();
     //Activar click en celda borrar
     activarBorrado();
+    //Activar click celda modificar
+    activarModificar();
 }//Fin de peticion completada
 
 
@@ -149,7 +152,7 @@ function ajaxPost(){
 }//Fin de ajaxPost
 
 //Actualizar-modificar datos de una pelicula concreta
-function ajaxPut(){
+function ajaxPutPrueba(){
     $.ajax('http://localhost:3000/peliculas/2', {
         method: 'PUT',
         data: {
@@ -172,6 +175,24 @@ function ajaxPut(){
     userId: 1
     }
     */
+}//Fin de ajaxPutPrueba
+
+function ajaxPut(){
+    console.log("En el metodo ajaxPut");
+    let datos = generaJsonFromFormularioModificado();
+    //url de la llamada ajax
+    let miUrl = 'http://localhost:3000/peliculas/' +devuelveElIdDeLaPelicula();
+    console.log("url para borrar la peli en la db:  " +miUrl)
+    $.ajax(miUrl, {
+        method: 'PUT',
+        data: datos
+        }).then(function(data) {
+        console.log("Resultado del PUT" +data);
+    });
+    console.log("Resultado del POST" +data);
+    //Recargo los datos desde el servidor
+    peticionAjaxGenerica();
+
 }//Fin de ajaxPut
 
 //Borrar pelicula

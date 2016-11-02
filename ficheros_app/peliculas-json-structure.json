@@ -115,6 +115,14 @@
       "fecha": "",
       "valoracion": "",
       "id": 18
+    },
+    {
+      "titulo": "serialize array",
+      "director": "qqq",
+      "sinopsis": "qqq",
+      "fecha": "2016-11-02",
+      "valoracion": "Excelente",
+      "id": 19
     }
   ]
 }
