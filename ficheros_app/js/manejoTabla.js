@@ -27,6 +27,8 @@ function activarModificar(){
     $("table tbody td.modificar").click(miModificar);
 }
 
+
+//Al hacer click en la celda modificar, se vuelcan los datos de la peli en el formulario
 function miModificar(){
     console.log("En el metodo miModificar");
     //Obtener la fila que contiene la celda borrar clickada
@@ -40,4 +42,14 @@ function miModificar(){
     $("[name='valoracion']").val(filaDatosDeLaPelicula.find("td:eq(5)").text());
 
     console.log("metodo miModificar, Nombre de la peli: " +$("[name='titulo']").val())
+    //Ademas, tengo que guardar en una variable global la fila que quiero modificar:
+    miFilaGlobal = filaDatosDeLaPelicula;
+
 }
+
+function actualizarLaFilaDeLaTabla(miFilaGlobal, datos){
+    //miFilaGlobal.find("td:eq(1)").text() = datos.
+}
+
+//Variable global con la fila que quiero modificar
+let miFilaGlobal;//Ahora es undefine

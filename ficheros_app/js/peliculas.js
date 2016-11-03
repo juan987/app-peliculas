@@ -177,12 +177,14 @@ function ajaxPutPrueba(){
     */
 }//Fin de ajaxPutPrueba
 
+
+//Al clickear boton de modificar arriba, esta funcion 
 function ajaxPut(){
     console.log("En el metodo ajaxPut");
     let datos = generaJsonFromFormularioModificado();
     //url de la llamada ajax
-    let miUrl = 'http://localhost:3000/peliculas/' +devuelveElIdDeLaPelicula();
-    console.log("url para borrar la peli en la db:  " +miUrl)
+    let miUrl = 'http://localhost:3000/peliculas/' +miFilaGlobal.find("td:eq(0)").text();
+    console.log("url para borrar la peli en la db:  " +miUrl);
     $.ajax(miUrl, {
         method: 'PUT',
         data: datos
@@ -191,7 +193,10 @@ function ajaxPut(){
     });
     console.log("Resultado del POST" +data);
     //Recargo los datos desde el servidor
-    peticionAjaxGenerica();
+    //peticionAjaxGenerica();
+
+    //Actualiza los datos de la fila
+    actualizarLaFilaDeLaTabla(miFilaGlobal, datos);
 
 }//Fin de ajaxPut
 
