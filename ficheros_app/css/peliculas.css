@@ -4,3 +4,7 @@
 	#rosa input:invalid {
 		background: red;
 	}
+
+	.elementoOculto {
+		display: none;
+	}

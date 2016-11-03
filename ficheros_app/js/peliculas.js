@@ -5,7 +5,7 @@ function initializeEvents(){
     peticionAjaxGenerica();
     $("#guardar").click(ajaxPost);
     $("#modificar").click(ajaxPut);
-    $("#borrar").click(ajaxDelete);
+    //$("#borrar").click(ajaxDelete);
     $("#serializarFormulario").click(generaJsonFromFormulario);
 
     
@@ -49,7 +49,7 @@ function peticionCompletada(data, status, jqXHR){
             +"<td>" +data[i].fecha +"</td>" 
             +"<td>" +data[i].valoracion +"</td>" 
             +"<td class='borrar'>" +"<button>Borrar</button>" +"</td>" 
-            +"<td class='modificar'>" +"<button>Modificar</button>" +"</td>" 
+            +"<td class='modificar'>" +"<button>Seleccionar</button>" +"</td>" 
 
             //Esto era el codigo para //url: "https://jsonplaceholder.typicode.com/users"
             //+"<td>" +data[i].address +"</td>"
