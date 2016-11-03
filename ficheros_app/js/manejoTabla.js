@@ -32,7 +32,8 @@ function activarModificar(){
 function miModificar(){
     console.log("En el metodo miModificar");
     //Obtener la fila que contiene la celda borrar clickada
-    let filaDatosDeLaPelicula = $(this).parent();
+    //let filaDatosDeLaPelicula = $(this).parent();
+    filaDatosDeLaPelicula = $(this).parent();
 
     $("[name='id']").val(filaDatosDeLaPelicula.find("td:eq(0)").text());
     $("[name='titulo']").val(filaDatosDeLaPelicula.find("td:eq(1)").text());
@@ -48,8 +49,19 @@ function miModificar(){
 }
 
 function actualizarLaFilaDeLaTabla(miFilaGlobal, datos){
-    //miFilaGlobal.find("td:eq(1)").text() = datos.
+    miFilaGlobal.find("td:eq(1)").text(datos.titulo);
+    miFilaGlobal.find("td:eq(2)").text(datos.director);
+    miFilaGlobal.find("td:eq(3)").text(datos.sinopsis);
+    miFilaGlobal.find("td:eq(4)").text(datos.fecha);
+    miFilaGlobal.find("td:eq(5)").text(datos.valoracion);
+    console.log("En metodo actualizarLaFilaDeLaTabla, titulo: " +datos.titulo);
 }
 
 //Variable global con la fila que quiero modificar
 let miFilaGlobal;//Ahora es undefine
+
+let filaDatosDeLaPelicula;
+
+function dameFilaModificada(){
+    return miFilaGlobal;
+}

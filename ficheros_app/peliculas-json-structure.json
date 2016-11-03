@@ -1,12 +1,12 @@
 {
   "peliculas": [
     {
-      "id": 3,
-      "titulo": "peli 3",
-      "director": "nju hhh",
-      "sinopsis": "sssssssssssssssssssssssssssssssssssssssssssssssss",
-      "fecha": "15/01/2016",
-      "valoracion": "Mala"
+      "titulo": "peli 3 mod",
+      "director": "nju hhh mod",
+      "sinopsis": "sssssssss mod ssssssssssssssssssssssssssssssssssssssss",
+      "fecha": "2016-11-03",
+      "valoracion": "Mala mod",
+      "id": 3
     },
     {
       "id": 4,

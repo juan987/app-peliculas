@@ -185,18 +185,20 @@ function ajaxPut(){
     //url de la llamada ajax
     let miUrl = 'http://localhost:3000/peliculas/' +miFilaGlobal.find("td:eq(0)").text();
     console.log("url para borrar la peli en la db:  " +miUrl);
+    
     $.ajax(miUrl, {
         method: 'PUT',
         data: datos
         }).then(function(data) {
         console.log("Resultado del PUT" +data);
     });
-    console.log("Resultado del POST" +data);
+    
     //Recargo los datos desde el servidor
     //peticionAjaxGenerica();
 
     //Actualiza los datos de la fila
-    actualizarLaFilaDeLaTabla(miFilaGlobal, datos);
+    actualizarLaFilaDeLaTabla(dameFilaModificada(), datos);
+    
 
 }//Fin de ajaxPut
 
