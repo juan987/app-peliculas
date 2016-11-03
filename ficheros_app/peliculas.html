@@ -24,10 +24,6 @@ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
-
-
-
-
 </head>
 <body>
 <div class="container">
@@ -40,32 +36,68 @@ integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7T
     <div class="elementoOculto" id="resultadoSerializacion"></div>
     <!-- FIN de En casa el 27oct16 -->
 
-
-
-
     <h1>Formulario de peliculas</h1>
-	<form id="miFormulario" action="#">
+	<form role="form" class="form-horizontal" id="miFormulario" action="#">
 	<div id="rosa">
-		<p>Id de la película: <input type="text" name="id" disabled  /></p>
-		<p>Título: <input type="text" name="titulo" required  /></p>
-		<p>Director: <input type="text" name="director" required  /></p>
-		<p>Sinopsis: <input type="text" name="sinopsis" required  /></p>
-        <p>Fecha: <input type="date" name="fecha" required/>
+        <div class="form-group">
+		    <label for="id_peli" class="col-sm-2 control-label">Id de la película</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="id_peli" name="id" disabled  />
+            </div>
+        </div>
 
-		<p>Valoración: <input type="text" list="cafes" name="valoracion" required></p>
-		<datalist id="cafes">
-			<option label="Mala" 
-					value="Mala">
-			<option label="Regular" 
-					value="Regular">
-			<option label="Buena" value="Buena">
-			<option label="Muy Buena" value="Muy Buena">
-			<option label="Excelente" value="Excelente">
-		</datalist>
-	</div> 
-        <input type="button" id="guardar" value="Guardar"/>
-        <input type="button" id="modificar" value="Modificar"/>
-        <input class="elementoOculto" type="button" id="borrar" value="Borrar"/>
+        <div class="form-group">
+		    <label for="titulo" class="col-sm-2 control-label">Título</label> 
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="titulo" name="titulo" required  />
+            </div>
+        </div>
+
+        <div class="form-group">
+		    <label for="director" class="col-sm-2 control-label">Director</label> 
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="director" name="director" required  />
+            </div>
+        </div>
+
+        <div class="form-group">
+		    <label for="sinopsis" class="col-sm-2 control-label">Sinopsis</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="sinopsis" name="sinopsis" required  />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha" class="col-sm-2 control-label">Fecha</label> 
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="fecha" name="fecha" required/>
+            </div>
+	    </div>
+
+        <div class="form-group">
+            <label for="valoracion" class="col-sm-2 control-label">Valoración</label> 
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="valoracion" list="cafes" name="valoracion" required>
+            </div>
+            <datalist id="cafes">
+                <option label="Mala" 
+                        value="Mala">
+                <option label="Regular" 
+                        value="Regular">
+                <option label="Buena" value="Buena">
+                <option label="Muy Buena" value="Muy Buena">
+                <option label="Excelente" value="Excelente">
+            </datalist>
+        </div>
+	</div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10"> 
+            <input type="button" id="guardar" value="Guardar"/>
+            <input type="button" id="modificar" value="Modificar"/>
+            <input class="elementoOculto" type="button" id="borrar" value="Borrar"/>
+        </div>
+    </div>
 
 	</form>
 
