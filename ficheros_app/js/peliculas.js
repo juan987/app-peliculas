@@ -146,6 +146,11 @@ function ajaxPost(){
         //data: objetoJson
         }).then(function(data) {
         console.log("Resultado del POST" +data);
+
+        //Borro todas las filas antes de recargar la DB
+        $('table tbody tr').remove();
+
+
         //Recargo los datos desde el servidor
         peticionAjaxGenerica();
     });

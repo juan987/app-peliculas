@@ -1,128 +1,44 @@
 {
   "peliculas": [
     {
-      "titulo": "peli 3 mod",
-      "director": "nju hhh mod",
-      "sinopsis": "sssssssss mod ssssssssssssssssssssssssssssssssssssssss",
-      "fecha": "2016-11-03",
-      "valoracion": "Mala mod",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "titulo": "peli 4",
-      "director": "ertc fffff ggggg",
-      "sinopsis": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
-      "fecha": "15/01/2016",
-      "valoracion": "Mala"
-    },
-    {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
+      "titulo": "peli 5 mod",
+      "director": "director 5",
+      "sinopsis": "hyfhoifho ohyfoihyfohofhofollcjv lkehwhehh",
+      "fecha": "2016-11-08",
       "valoracion": "Excelente",
-      "id": 5
+      "id": 30
     },
     {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
+      "titulo": "peli 6",
+      "director": "director 6",
+      "sinopsis": "hyfhoifho ohyfoihyfohofhofollcjv lkehwhehh",
+      "fecha": "2016-11-09",
       "valoracion": "Excelente",
-      "id": 6
+      "id": 31
     },
     {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 7
+      "titulo": "peli 7",
+      "director": "director 7",
+      "sinopsis": "klefjlkefjle efljkfelijefliujfjlief hliefhjolefiolfhjef lifhefoihoiefhoiefhoef lkefholfhoiefheof hoilhyfeoihfeoihefoiefo lkhiefhefoifeoiefhoi ",
+      "fecha": "2016-11-27",
+      "valoracion": "Regular",
+      "id": 32
     },
     {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 8
-    },
-    {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 9
-    },
-    {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 10
-    },
-    {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 11
-    },
-    {
-      "titulo": "bar",
-      "director": 1,
-      "sinopsis": 1,
-      "fecha": "12/06/1998",
-      "valoracion": "Excelente",
-      "id": 12
-    },
-    {
-      "{titulo:'guardar',director:'wwww',sinopsis:'dede  ffff',fecha:'2016-10-27',valoracion:'Excelente',}": "",
-      "id": 13
-    },
-    {
-      "undefinedtitulo:'prueba guardar',director:'ssss',sinopsis:'eeeee',fecha:'2016-10-27',valoracion:'Excelente'": "",
-      "id": 14
-    },
-    {
-      "datos": "undefinedtitulo:'guardar prueba',director:'jdjkd djdjk',sinopsis:'kdkdkddkdkdkd',fecha:'2016-10-27',valoracion:'Excelente'",
-      "id": 15
-    },
-    {
-      "titulo": "www",
-      "director": "www",
-      "sinopsis": "www",
-      "fecha": "2016-10-27",
-      "valoracion": "Excelente",
-      "id": 16
-    },
-    {
-      "titulo": 17,
-      "director": "yyyy",
-      "sinopsis": "yyyy",
-      "fecha": "2016-10-30",
+      "titulo": "peli 8",
+      "director": "director 8",
+      "sinopsis": "hhcu",
+      "fecha": "2016-11-26",
       "valoracion": "Mala",
-      "id": 17
+      "id": 33
     },
     {
-      "titulo": "",
-      "director": "",
-      "sinopsis": "",
-      "fecha": "",
-      "valoracion": "",
-      "id": 18
-    },
-    {
-      "titulo": "serialize array",
-      "director": "qqq",
-      "sinopsis": "qqq",
-      "fecha": "2016-11-02",
+      "titulo": "peli 9 modificada",
+      "director": "director 9",
+      "sinopsis": "ya esta",
+      "fecha": "2016-12-01",
       "valoracion": "Excelente",
-      "id": 19
+      "id": 34
     }
   ]
 }

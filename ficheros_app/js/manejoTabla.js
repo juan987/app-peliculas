@@ -5,16 +5,30 @@ function verTextoDeUnaFila(){
     });
 }
 
+
+/*
+function permitirMuiltiplesLineaEnCeldas(){
+    $("table td").css("display", "block");
+}
+*/
+
 function resaltarFilaEnTablaCuandoHover(){
     $('table tbody tr').hover(inMouseEvent, outMouseEvent);
 }
 
 function inMouseEvent(){
-    $(this).css("background-color", "#ff0")
+    //$(this).css("background-color", "#ff0")
+    $(this).css("background-color", "#3949AB");
+    //Cambia las letras a color blanco
+    $(this).css("color", "#fff");
+    //La letra de los botones borrar y seleccionar en negro
+    $('td.borrar').css("color", "#000");
+    $('td.modificar').css("color", "#000");
 }
 
 function outMouseEvent(){
-    $(this).css("background-color", "#fff")
+    $(this).css("background-color", "#fff");
+    $(this).css("color", "#000");
 }
 
 function activarBorrado(){

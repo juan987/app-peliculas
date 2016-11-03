@@ -8,3 +8,8 @@
 	.elementoOculto {
 		display: none;
 	}
+	
+	footer#pie > section{
+    padding-right: 10px;
+    text-align: center;
+}
